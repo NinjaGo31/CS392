@@ -1,0 +1,9 @@
+all: sort
+sort: sort.o mergesort.o
+	gcc sort.o mergesort.o -o sort
+sort.o: sort.c
+	gcc -c -g sort.c
+mergesort.o: mergesort.c
+	gcc -c -g mergesort.c
+clean:
+	rm -rf *.o sort
